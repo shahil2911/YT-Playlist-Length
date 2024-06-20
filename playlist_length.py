@@ -107,17 +107,17 @@ from googleapiclient.discovery import build
 import re
 import isodate
 import math
-import os
-from dotenv import load_dotenv
+# import os
+# from dotenv import load_dotenv
 
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
-# Load environment variables from .env file
-load_dotenv()
+# # Load environment variables from .env file
+# load_dotenv()
 
 # Your Google API key
-API_KEY = os.getenv('API_KEY')
+API_KEY = api_key
 
 
 # Build a service object for interacting with the API
