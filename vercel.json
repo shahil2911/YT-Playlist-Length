@@ -4,12 +4,12 @@
 		{
 			"src": "playlist_length.py",
 			"use": "@vercel/python"
-		}	
+		}
 	],
 	"routes": [
 		{
 			"src": "/(.*)",
-			"use": "playlist_length.py"
+			"dest": "/playlist_length.py"
 		}
 	]
 }
