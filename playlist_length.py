@@ -2,9 +2,14 @@
 # import re
 # import isodate
 # import math
+# import os
+# from dotenv import load_dotenv
+
+# # Load environment variables from .env file
+# load_dotenv()
 
 # # Your Google API key
-# API_KEY = 'AIzaSyD1vIDIVxLaZ6biTobiqktBuKSUdFUWBkU'
+# API_KEY = os.getenv('API_KEY')
 
 # # Build a service object for interacting with the API
 # youtube = build('youtube', 'v3', developerKey=API_KEY)
