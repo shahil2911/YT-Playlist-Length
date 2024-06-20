@@ -1,0 +1,15 @@
+{
+	"version": 2,
+	"builds": [
+		{
+			"src": "playlist_length.py",
+			"use": "@vercel/python"
+		}	
+	],
+	"routes": [
+		{
+			"src": "/(.*)",
+			"use": "playlist_length.py"
+		}
+	]
+}
