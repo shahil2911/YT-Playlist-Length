@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>YouTube Playlist Duration Calculator</title>
+		<link rel="stylesheet" href="/static/styles.css" />
+	</head>
+	<body>
+		<div class="container">
+			<h1>YouTube Playlist Duration Calculator</h1>
+			<form method="post">
+				<input
+					type="text"
+					name="url"
+					placeholder="Enter YouTube Playlist URL"
+				/>
+				<button type="submit">Calculate Duration</button>
+			</form>
+			{% if duration %}
+			<h2>Total Duration: {{ duration }}</h2>
+			<h3>Number of Videos: {{ number_of_videos }}</h3>
+			<h3>Average Length of Video: {{ avg_duration }}</h3>
+			<h3>Total Length of Playlist: {{ duration }}</h3>
+			{% for speed, adjusted_duration in adjusted_durations.items() %}
+			<h3>At {{ speed }}x: {{ adjusted_duration }}</h3>
+			{% endfor %} {% elif error %}
+			<h2>{{ error }}</h2>
+			{% endif %}
+
+		</div>
+	</body>
+</html>
